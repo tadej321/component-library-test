@@ -11,13 +11,15 @@ export function Button () {
 }
 
 const Wrapper = styled.div`
-  width: 50px;
-  height: 30px;
+  width: 100px;
+  height: 50px;
   color: white;
   background: red;
   border: 1px solid black
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer 
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
 `
