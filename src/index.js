@@ -4,23 +4,26 @@ import styled from "styled-components";
 
 export function Button () {
   return(
-    <div style={
-      {
-        width: "100px",
-        height: "50px",
-        color: "white",
-        background: "red",
-        border: "1px solid black",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        textAlign: "center",
-        fontSize: "12px",
-      }
-    }>
+    // <div style={
+    //   {
+    //     width: "100px",
+    //     height: "50px",
+    //     color: "white",
+    //     background: "red",
+    //     border: "1px solid black",
+    //     display: "flex",
+    //     alignItems: "center",
+    //     justifyContent: "center",
+    //     cursor: "pointer",
+    //     textAlign: "center",
+    //     fontSize: "12px",
+    //   }
+    // }>
+    //   Hello
+    // </div>
+    <Wrapper>
       Hello
-    </div>
+    </Wrapper>
   )
 }
 
