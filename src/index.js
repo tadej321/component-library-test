@@ -22,7 +22,7 @@ export function Button () {
     //   Hello
     // </div>
     <Wrapper>
-      Hello
+      I am imported from an external component library
     </Wrapper>
   )
 }

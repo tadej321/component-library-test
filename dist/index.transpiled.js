@@ -31,7 +31,7 @@ function Button() {
     // }>
     //   Hello
     // </div>
-    _react["default"].createElement(Wrapper, null, "Hello")
+    _react["default"].createElement(Wrapper, null, "I am imported from an external component library")
   );
 }
 
