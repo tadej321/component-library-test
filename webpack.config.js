@@ -34,9 +34,11 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       "React": "react",
+      "Styled": "styled"
     })
   ],
   externals: {
-    react: "react"
+    react: "react",
+    styled: "styled-components"
   },
 }
