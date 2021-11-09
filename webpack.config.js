@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 
 module.exports = {
-  entry: "./dist/index.transpiled.js",
+  entry: "./src/index.js",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -13,22 +13,22 @@ module.exports = {
     publicPath: ""
   },
   module: {
-    // rules: [
-    //   {
-    //     test: /\.m?js$/,
-    //     exclude: /node_modules/,
-    //     use: {
-    //       loader: 'babel-loader',
-    //       // options: {
-    //       //   presets: [
-    //       //     "@babel/preset-env",
-    //       //     "@babel/preset-react"
-    //       //   ],
-    //       //   plugins: ["babel-plugin-styled-components"]
-    //       // }
-    //     }
-    //   }
-    // ]
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ],
+            plugins: ["babel-plugin-styled-components"]
+          }
+        }
+      }
+    ]
   },
   resolve: {},
   plugins: [
