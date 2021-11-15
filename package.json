@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "rollup -c",
     "transpile": "babel src -o dist/index.transpiled.js"
   },
   "author": "",
@@ -15,10 +16,14 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.13.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "styled-components": "^5.2.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
