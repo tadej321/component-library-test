@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+export * from "./Icon"
 
 export function Button () {
   return(
