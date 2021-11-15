@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import external from 'rollup-plugin-peer-deps-external'
+import inject from '@rollup/plugin-inject';
 
 export default [
   {
@@ -24,6 +25,9 @@ export default [
           "@babel/preset-react"
         ],
         plugins: ["babel-plugin-styled-components"]
+      }),
+      inject({
+        Promise: ['react', 'React']
       }),
       external(),
       resolve(),
