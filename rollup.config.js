@@ -27,7 +27,7 @@ export default [
         plugins: ["babel-plugin-styled-components"]
       }),
       inject({
-        React: ['react']
+        React: 'react'
       }),
       external(),
       resolve(),

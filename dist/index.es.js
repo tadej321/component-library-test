@@ -1,4 +1,4 @@
-import React, { useState, undefined as undefined$1 } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function Button() {
@@ -88,7 +88,7 @@ var Icon = function Icon(_ref) {
     console.log(obj);
     setSrc(obj["default"].src);
   });
-  return /*#__PURE__*/undefined$1.createElement(Svg, {
+  return /*#__PURE__*/React.createElement(Svg, {
     color: color,
     onClick: onClick,
     open: open,
@@ -96,7 +96,7 @@ var Icon = function Icon(_ref) {
     height: height,
     margin: margin,
     active: active
-  }, /*#__PURE__*/undefined$1.createElement("use", {
+  }, /*#__PURE__*/React.createElement("use", {
     xlinkHref: "".concat(src, "#").concat(icon)
   }));
 };

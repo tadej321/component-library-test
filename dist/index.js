@@ -115,7 +115,7 @@ var Icon = function Icon(_ref) {
     console.log(obj);
     setSrc(obj["default"].src);
   });
-  return /*#__PURE__*/React["undefined"].createElement(Svg, {
+  return /*#__PURE__*/React__default["default"].createElement(Svg, {
     color: color,
     onClick: onClick,
     open: open,
@@ -123,7 +123,7 @@ var Icon = function Icon(_ref) {
     height: height,
     margin: margin,
     active: active
-  }, /*#__PURE__*/React["undefined"].createElement("use", {
+  }, /*#__PURE__*/React__default["default"].createElement("use", {
     xlinkHref: "".concat(src, "#").concat(icon)
   }));
 };
