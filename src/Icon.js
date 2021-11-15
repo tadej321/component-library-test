@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const Icon = ({ active, icon, margin, width, height, open, onClick, mobileWidth, color }) => {
+export const Icon = ({ active, icon, margin, width, height, open, onClick, mobileWidth, color }) => {
 
   return(
     <Svg color={color} onClick={onClick} open={open} width={width} height={height} margin={margin} active={active}>
@@ -27,5 +27,3 @@ const Svg = styled.svg(props => ({
   },
 }));
 
-
-export default Icon
