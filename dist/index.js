@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var React$1 = require('react');
+var React = require('react');
 var styled = require('styled-components');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -25,7 +25,7 @@ function _interopNamespace(e) {
   return Object.freeze(n);
 }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
 function Button() {
@@ -106,7 +106,7 @@ var Icon = function Icon(_ref) {
       _ref.mobileWidth;
       var color = _ref.color;
 
-  var _useState = React$1.useState(''),
+  var _useState = React.useState(''),
       _useState2 = _slicedToArray(_useState, 2),
       src = _useState2[0],
       setSrc = _useState2[1];
@@ -115,7 +115,7 @@ var Icon = function Icon(_ref) {
     console.log(obj);
     setSrc(obj["default"].src);
   });
-  return /*#__PURE__*/React.createElement(Svg, {
+  return /*#__PURE__*/React["undefined"].createElement(Svg, {
     color: color,
     onClick: onClick,
     open: open,
@@ -123,7 +123,7 @@ var Icon = function Icon(_ref) {
     height: height,
     margin: margin,
     active: active
-  }, /*#__PURE__*/React.createElement("use", {
+  }, /*#__PURE__*/React["undefined"].createElement("use", {
     xlinkHref: "".concat(src, "#").concat(icon)
   }));
 };

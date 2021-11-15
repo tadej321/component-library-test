@@ -1,8 +1,8 @@
-import React$1, { useState } from 'react';
+import React, { useState, undefined as undefined$1 } from 'react';
 import styled from 'styled-components';
 
 function Button() {
-  return /*#__PURE__*/React$1.createElement(Wrapper, null, "I am imported from an external component library");
+  return /*#__PURE__*/React.createElement(Wrapper, null, "I am imported from an external component library");
 }
 var Wrapper = styled.div.withConfig({
   displayName: "Button__Wrapper",
@@ -88,7 +88,7 @@ var Icon = function Icon(_ref) {
     console.log(obj);
     setSrc(obj["default"].src);
   });
-  return /*#__PURE__*/React.createElement(Svg, {
+  return /*#__PURE__*/undefined$1.createElement(Svg, {
     color: color,
     onClick: onClick,
     open: open,
@@ -96,7 +96,7 @@ var Icon = function Icon(_ref) {
     height: height,
     margin: margin,
     active: active
-  }, /*#__PURE__*/React.createElement("use", {
+  }, /*#__PURE__*/undefined$1.createElement("use", {
     xlinkHref: "".concat(src, "#").concat(icon)
   }));
 };
