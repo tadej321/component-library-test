@@ -17,6 +17,7 @@ export const Icon = ({ active, icon, margin, width, height, open, onClick, mobil
   )
 }
 
+
 const Svg = styled.svg(props => ({
   margin: props.margin,
   width: props.width ? props.width : 15,

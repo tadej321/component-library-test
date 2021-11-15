@@ -1,37 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React$1 = require('react');
-var styled = require('styled-components');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-function _interopNamespace(e) {
-  if (e && e.__esModule) return e;
-  var n = Object.create(null);
-  if (e) {
-    Object.keys(e).forEach(function (k) {
-      if (k !== 'default') {
-        var d = Object.getOwnPropertyDescriptor(e, k);
-        Object.defineProperty(n, k, d.get ? d : {
-          enumerable: true,
-          get: function () { return e[k]; }
-        });
-      }
-    });
-  }
-  n["default"] = e;
-  return Object.freeze(n);
-}
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
-var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
+import React$1, { useState } from 'react';
+import styled from 'styled-components';
 
 function Button() {
-  return /*#__PURE__*/React__default["default"].createElement(Wrapper, null, "I am imported from an external component library");
+  return /*#__PURE__*/React$1.createElement(Wrapper, null, "I am imported from an external component library");
 }
-var Wrapper = styled__default["default"].div.withConfig({
+var Wrapper = styled.div.withConfig({
   displayName: "Button__Wrapper",
   componentId: "sc-vmh9hn-0"
 })(["width:100px;height:50px;color:white;background:red;border:1px solid black;display:flex;align-items:center;justify-content:center;cursor:pointer;text-align:center;font-size:12px;"]);
@@ -106,12 +79,12 @@ var Icon = function Icon(_ref) {
       _ref.mobileWidth;
       var color = _ref.color;
 
-  var _useState = React$1.useState(''),
+  var _useState = useState(''),
       _useState2 = _slicedToArray(_useState, 2),
       src = _useState2[0],
       setSrc = _useState2[1];
 
-  (function (t) { return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(t)); }); })("./icons/".concat(icon, ".svg")).then(function (obj) {
+  import("./icons/".concat(icon, ".svg")).then(function (obj) {
     console.log(obj);
     setSrc(obj["default"]);
   });
@@ -127,7 +100,7 @@ var Icon = function Icon(_ref) {
     xlinkHref: "".concat(src, "#").concat(icon)
   }));
 };
-var Svg = styled__default["default"].svg.withConfig({
+var Svg = styled.svg.withConfig({
   displayName: "Icon__Svg",
   componentId: "sc-59t7a4-0"
 })(function (props) {
@@ -149,5 +122,4 @@ var Svg = styled__default["default"].svg.withConfig({
   };
 });
 
-exports.Button = Button;
-exports.Icon = Icon;
+export { Button, Icon };
