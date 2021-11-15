@@ -1,11 +1,16 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
+import {useState} from "react";
 
 export const Icon = ({ active, icon, margin, width, height, open, onClick, mobileWidth, color }) => {
+  const [src, setSrc] = useState('')
+
+  import(`./icons/${icon}.svg`).then(obj => {
+    setSrc(obj.default.src)
+  })
 
   return(
     <Svg color={color} onClick={onClick} open={open} width={width} height={height} margin={margin} active={active}>
-      <use xlinkHref={`./icons/${icon}.svg#${icon}`} />
+      <use xlinkHref={`${src}#${icon}`} />
     </Svg>
   )
 }
@@ -26,4 +31,3 @@ const Svg = styled.svg(props => ({
     minHeight: props.mobileWidth  ? props.mobileWidth : props.height,
   },
 }));
-
