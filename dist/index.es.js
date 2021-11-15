@@ -1,8 +1,8 @@
-import React$1, { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function Button() {
-  return /*#__PURE__*/React$1.createElement(Wrapper, null, "I am imported from an external component library");
+  return /*#__PURE__*/React.createElement(Wrapper, null, "I am imported from an external component library");
 }
 var Wrapper = styled.div.withConfig({
   displayName: "Button__Wrapper",
