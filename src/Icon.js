@@ -8,7 +8,7 @@ export const Icon = ({ active, icon, margin, width, height, open, onClick, mobil
 
   import(`./icons/${icon}.svg`).then(obj => {
     console.log(obj)
-    setSrc(obj.default)
+    setSrc(obj.default.src)
   })
 
   return(

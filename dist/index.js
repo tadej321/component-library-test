@@ -113,7 +113,7 @@ var Icon = function Icon(_ref) {
 
   (function (t) { return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(t)); }); })("./icons/".concat(icon, ".svg")).then(function (obj) {
     console.log(obj);
-    setSrc(obj["default"]);
+    setSrc(obj["default"].src);
   });
   return /*#__PURE__*/React__default["default"].createElement(Svg, {
     color: color,

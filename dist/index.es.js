@@ -86,7 +86,7 @@ var Icon = function Icon(_ref) {
 
   import("./icons/".concat(icon, ".svg")).then(function (obj) {
     console.log(obj);
-    setSrc(obj["default"]);
+    setSrc(obj["default"].src);
   });
   return /*#__PURE__*/React.createElement(Svg, {
     color: color,
