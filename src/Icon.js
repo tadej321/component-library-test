@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import {useState} from "react";
-import add from "./icons/add.svg"
 
 export const Icon = ({ active, icon, margin, width, height, open, onClick, mobileWidth, color }) => {
   const [src, setSrc] = useState('')
 
-  console.log("add", add)
 
   import(`./icons/${icon}.svg`).then(obj => {
     console.log(obj)
-    setSrc(obj.default.src)
+    setSrc(obj.default)
   })
 
   return(
