@@ -10,7 +10,8 @@ module.exports = {
     filename: "index.js",
     libraryTarget: "umd",
     globalObject: 'this',
-    publicPath: ""
+    publicPath: "",
+    assetModuleFilename: './icons/[name][ext]',
   },
   module: {
     rules: [
@@ -27,6 +28,10 @@ module.exports = {
             plugins: ["babel-plugin-styled-components"]
           }
         }
+      },
+      {
+        test: /\.(png|jpe?g|gif|json|xml|ico|svg)$/i,
+        type: 'asset/resource'
       }
     ]
   },

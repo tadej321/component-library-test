@@ -5,7 +5,7 @@ export const Icon = ({ active, icon, margin, width, height, open, onClick, mobil
 
   return(
     <Svg color={color} onClick={onClick} open={open} width={width} height={height} margin={margin} active={active}>
-      <use xlinkHref={`../raw/${icon}.svg#${icon}`} />
+      <use xlinkHref={`./icons/${icon}.svg#${icon}`} />
     </Svg>
   )
 }
